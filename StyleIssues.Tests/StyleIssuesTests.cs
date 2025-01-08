@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using NUnit.Framework;
 
 // ReSharper disable StringLiteralTypo
@@ -110,7 +110,7 @@ namespace StyleIssues.Tests
         [Test]
         public void CA1507_MyMethod_ThrowsArgumentNullException()
         {
-            Assert.Throws<ArgumentNullException>(() => CA1507.MyClass.MyMethod(null));
+            _ = Assert.Throws<ArgumentNullException>(static () => CA1507.MyClass.MyMethod(null));
         }
 
         [Test]
